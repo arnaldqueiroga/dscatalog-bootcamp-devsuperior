@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.devsuperior.dscatalog.entities.Category;
+import com.devsuperior.dscatalog.dto.CategoryDTO;
 import com.devsuperior.dscatalog.services.CategoryService;
 
 @RestController
@@ -22,8 +22,8 @@ public class CategoryResource {
 	@GetMapping // Para configurar que o método abaixo seja um web service, utilizamos a anotation @GetMapping
 	
 	// Criando o 1º End Point
-	public ResponseEntity<List<Category>> findAll() {
-		List<Category> list = service.findAll(); // Essa lista chama o Service, que por sua vez chama o Repository, que por sua vez foi no BD, trouxe os objetos, os instanciou, e guardou nessa lista 
+	public ResponseEntity<List<CategoryDTO>> findAll() {
+		List<CategoryDTO> list = service.findAll(); // Essa lista chama o Service, que por sua vez chama o Repository, que por sua vez foi no BD, trouxe os objetos, os instanciou, e guardou nessa lista 
 				
 		// Mandar método FindAll retornar essa lista para o corpo da resposta HTTP dessa requisição
 		return ResponseEntity.ok().body(list);
