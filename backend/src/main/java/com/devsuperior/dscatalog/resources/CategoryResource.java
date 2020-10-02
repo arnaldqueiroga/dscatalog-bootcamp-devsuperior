@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -15,7 +16,7 @@ import com.devsuperior.dscatalog.services.CategoryService;
 @RequestMapping(value = "/categories")
 public class CategoryResource {
 	
-	// Declarando dependência do COntrolador para o Service	
+	// Declarando dependência do Controlador para o Service	
 	@Autowired
 	private CategoryService service;
 	
@@ -27,8 +28,19 @@ public class CategoryResource {
 				
 		// Mandar método FindAll retornar essa lista para o corpo da resposta HTTP dessa requisição
 		return ResponseEntity.ok().body(list);
-		
-		
+				
 	}
+	
+	// Criando End Point para buscar categoria por id
+		@GetMapping(value = "/{id}")		
+		public ResponseEntity<CategoryDTO> findById(@PathVariable Long id ) {
+			CategoryDTO dto = service.findById(id);		
+			return ResponseEntity.ok().body(dto);
+			
+			
+		}
+	
+	
+	
 
 }
