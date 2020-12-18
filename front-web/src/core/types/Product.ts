@@ -6,7 +6,7 @@ export type ProductsResponse = {
 export type Product = {
     id: number;
     name: string;
-    descrition: string;
+    description: string;
     price: number;
     imgUrl: string;
     date: string;
