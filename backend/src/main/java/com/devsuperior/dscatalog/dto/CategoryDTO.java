@@ -23,7 +23,7 @@ public class CategoryDTO implements Serializable {
 	}
 	
 	// Construtor que recebe a entidade - Dessa forma, já podemos ter um construtor que vai 
-	//povoar o CategoryDTO cimplesmente com o fato de passarmos a entidade como argumento
+	//povoar o CategoryDTO simplesmente com o fato de passarmos a entidade como argumento
 	public CategoryDTO(Category entity) {
 		this.id = entity.getId();
 		this.name = entity.getName();

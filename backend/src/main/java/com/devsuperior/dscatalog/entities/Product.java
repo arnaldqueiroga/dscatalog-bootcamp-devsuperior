@@ -35,6 +35,7 @@ public class Product  implements Serializable {
 	@Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")	
 	private Instant date;
 	
+	// Mapeamento da criação da tabela de associação entre Produto e Categoria	
 	@ManyToMany
 	@JoinTable (name = "tb_product_category",
 			joinColumns = @JoinColumn(name = "product_id"),
