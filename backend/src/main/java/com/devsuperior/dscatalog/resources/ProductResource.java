@@ -2,6 +2,8 @@ package com.devsuperior.dscatalog.resources;
 
 import java.net.URI;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -64,7 +66,7 @@ public class ProductResource {
 		
 		// Criando End Point para inserir uma nova categoria - POST
 		@PostMapping
-		public ResponseEntity<ProductDTO> insert(@RequestBody ProductDTO dto){
+		public ResponseEntity<ProductDTO> insert(@Valid @RequestBody ProductDTO dto){
 			dto = service.insert(dto);
 			
 			URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")
@@ -75,7 +77,7 @@ public class ProductResource {
 		
 		// Criando End Point para atualizar Categoria - PUT
 		@PutMapping(value = "/{id}")
-		public ResponseEntity<ProductDTO> update(@PathVariable Long id, @RequestBody ProductDTO dto){
+		public ResponseEntity<ProductDTO> update(@Valid @PathVariable Long id, @RequestBody ProductDTO dto){
 			dto = service.update(id, dto);
 			return ResponseEntity.ok().body(dto);
 					
