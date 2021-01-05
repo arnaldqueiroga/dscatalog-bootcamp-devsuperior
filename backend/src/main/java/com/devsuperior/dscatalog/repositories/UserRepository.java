@@ -10,5 +10,8 @@ import com.devsuperior.dscatalog.entities.User;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
+	
+	// Método que busque no BD um usuário pelo e-mail (esse método está sendo usado na classe UserInsertValidator)
+	User findByEmail (String email);	
 
 }
