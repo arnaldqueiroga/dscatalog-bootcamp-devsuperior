@@ -1,7 +1,7 @@
 .product-details-container {
     margin-top: 40px;
     padding-left: 40px;
-    padding-right: 40px;    
+    padding-right: 40px;
 }
 
 .product-details {
@@ -12,8 +12,6 @@
     display: flex;
     align-items: center;
     margin-bottom: 20px;
-    
-
 }
 
 .icon-goback {
@@ -21,6 +19,7 @@
     transform: rotate(-180deg);
     margin-right: 30px;
 }
+
 .text-goback {
     font-size: 24px;
     line-height: 33px;
@@ -30,9 +29,9 @@
 }
 
 .product-details-card {
-    border: 1px solid #E1E1E1;    
+    border: 1px solid #E1E1E1;
     border-radius: 20px;
-    padding: 30px 29px;
+    padding: 38px 29px;
 }
 
 .product-details-image {
@@ -64,5 +63,4 @@
 
 .product-details .product-price {
     font-size: 48px;
-
 }

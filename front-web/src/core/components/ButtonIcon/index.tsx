@@ -1,12 +1,12 @@
 import React from 'react';
+import { ReactComponent as ArrowIcon } from 'core/assets/images/arrow.svg';
 import './styles.scss';
-import { ReactComponent as ArrowIcon } from '../../assets/images/arrow.svg';
 
 type Props = {
     text: string;
 }
 
-const ButtonIcon = ({text}: Props) => (
+const ButtonIcon = ({ text }: Props) => (
     <div className="d-flex">
         <button className="btn btn-primary btn-icon">
             <h5>{text}</h5>
@@ -15,7 +15,6 @@ const ButtonIcon = ({text}: Props) => (
             <ArrowIcon />
         </div>
     </div>
-
 );
 
 export default ButtonIcon;

@@ -1,6 +1,5 @@
-
 .product-price-container {
-    margin-top: 25px;
+    margin-top: 10px;
     display: flex;
 }
 
@@ -9,13 +8,14 @@
     line-height: 25px;
     letter-spacing: -0.015em;
     color: #9E9E9E;
+    padding-top: 14px;
+
 }
 
 .product-price {
-    font-weight: bold;
     font-size: 32px;
     line-height: 44px;
     letter-spacing: -0.015em;
     color: #407BFF;
-    margin-left: 10px;
+    margin: 10px;
 }
